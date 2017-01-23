@@ -7,9 +7,11 @@
 	<title>Elliptical Workout App</title>
 	<meta name="description" content="Elliptical Workout App">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!--css stylesheets-->
+	<!--Normalize css-->
 	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<!--Bootstrap css-->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!--css stylesheets-->
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -21,20 +23,20 @@
 	<div class="elipticalApp">
 
 		<header>
-			<div id="wrapper">
-				<h1>My Eliptical Workout Data</h1>
-			</div><!--End of wrapper-->
+			<div class="container">
+				<h1>Elliptical Workout App</h1>
+			</div><!--End of container-->
 		</header><!--End of header-->
 
 		<div class="warning">
-			<div id="wrapper">
-				<h1>Please fill in all text fields</h1>
-			</div>
-		</div>
+			<div class="container">
+				<h2>Please fill in all input text fields!<!--<a href="#">X</a>--></h2>
+			</div><!--End of container-->
+		</div><!--End of warning-->
 		
 		<div class="entry">
-			<div id="wrapper">
-				<h2>Enter my workout</h2>
+			<div class="container">
+				<h2>Enter Workout Data</h2>
 				<p>
 					<label for="day">Day of the Week</label>
 					<input type="text" id="day" name="day">
@@ -55,25 +57,25 @@
 				<p>
 					<button id="submitData">Submit Data</button>
 				</p>
-			</div><!--End of wrapper-->
+			</div><!--End of container-->
 		</div><!--End of entry-->
 
 		<div class="data">
-			<div id="wrapper">
-				<h2>Data Entered</h2>
+			<div class="container">
+				<h2>My Workout Data</h2>
 
 				<div class="dataEntered">
 					<h3 class="week">Week 1</h3>
 					<ul class="work">
 						<li><strong>Day:</strong> Monday</li>
-						<li><strong>Time Spent:</strong> 30minutes</li>
-						<li><strong>Distance:</strong> 3.25miles</li>
+						<li><strong>Time Spent:</strong> 30 minutes</li>
+						<li><strong>Distance:</strong> 3.25 miles</li>
 						<li><strong>Calories Burned:</strong> 350</li>
 					</ul>
 				</div>
 
 
-			</div><!--End of wrapper-->
+			</div><!--End of container-->
 		</div><!--End of data-->
 
 	</div><!--End of elipticalApp-->
@@ -89,6 +91,9 @@
 	<script>
 	window.jQuery || document.write("<script src='js/jquery-2.1.4.min.js'><\/script>");
 	</script>
+
+	<!--bootstrap js file-->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 
 	<!--jquery scripts file-->
 	<script src="js/scripts.js"></script>
