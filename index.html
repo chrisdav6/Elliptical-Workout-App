@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Elliptical Workout App</title>
+	<meta name="description" content="Elliptical Workout App">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--css stylesheets-->
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	
+	
+		
+	<div class="elipticalApp">
+
+		<header>
+			<div id="wrapper">
+				<h1>My Eliptical Workout Data</h1>
+			</div><!--End of wrapper-->
+		</header><!--End of header-->
+
+		<div class="warning">
+			<div id="wrapper">
+				<h1>Please fill in all text fields</h1>
+			</div>
+		</div>
+		
+		<div class="entry">
+			<div id="wrapper">
+				<h2>Enter my workout</h2>
+				<p>
+					<label for="day">Day of the Week</label>
+					<input type="text" id="day" name="day">
+				</p>
+				<p>
+					<label for="time">Time Spent</label>
+					<input type="text" id="time" name="time">
+				</p>
+				<p>
+					<label for="distance">Distance</label>
+					<input type="text" id="distance" name="distance">
+				</p>
+				<p>
+					<label for="calories">Calories Burned</label>
+					<input type="text" id="calories" name="calories">
+				</p>
+
+				<p>
+					<button id="submitData">Submit Data</button>
+				</p>
+			</div><!--End of wrapper-->
+		</div><!--End of entry-->
+
+		<div class="data">
+			<div id="wrapper">
+				<h2>Data Entered</h2>
+
+				<div class="dataEntered">
+					<h3 class="week">Week 1</h3>
+					<ul class="work">
+						<li><strong>Day:</strong> Monday</li>
+						<li><strong>Time Spent:</strong> 30minutes</li>
+						<li><strong>Distance:</strong> 3.25miles</li>
+						<li><strong>Calories Burned:</strong> 350</li>
+					</ul>
+				</div>
+
+
+			</div><!--End of wrapper-->
+		</div><!--End of data-->
+
+	</div><!--End of elipticalApp-->
+
+
+
+
+
+	<!--jquery loaded from google cdn-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<!--jquery backup loaded locally-->
+	<script>
+	window.jQuery || document.write("<script src='js/jquery-2.1.4.min.js'><\/script>");
+	</script>
+
+	<!--jquery scripts file-->
+	<script src="js/scripts.js"></script>
+
+</body>
+</html>

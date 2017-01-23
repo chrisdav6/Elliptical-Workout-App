@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	box-sizing: border-box;
+}
+
+h1, h2 {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 2%;
+}
+
+header {
+	height: 120px;
+	background: rgb(142, 142, 142);
+	padding-top: 40px;
+}
+
+header h1 {
+	color: white;
+	margin-top: 0;
+}
+
+.warning {
+	background: #d12e2e;
+	padding: 10px 0;
+	color: white;
+	display: none;
+}
+
+.entry {
+	background: rgb(201, 201, 201);
+	padding: 20px 0;
+}
+
+.data {
+	padding: 20px 0;
+}
+
+.week {
+	background: grey;
+	padding: 5px;
+}
+
+.dataEntered ul {
+	padding: 0;
+	list-style: none;
+}
+
+.dataEntered li {
+	display: inline-block;
+	margin-right: 40px;
+}
