@@ -5,20 +5,25 @@
 	box-sizing: border-box;
 }
 
+body {
+	padding-top: 50px;
+}
+
 h1, h2, h3 {
 	margin: 0;
 	padding: 0;
 }
 
-header {
-	height: 120px;
-	background: rgb(142, 142, 142);
-	padding-top: 40px;
+.page-header {
+	margin-bottom: 0;
+}
+
+.navbar {
+	margin-bottom: 0;
 }
 
 header h1 {
-	font-size: 3em;
-	color: white;
+	padding-bottom: 30px;
 }
 
 .warning {
@@ -83,12 +88,6 @@ label.real-large-label {
    font-weight: normal;
 }
 
-button.real-large-button {
-   font-size: 22px;
-   padding: 20px 30px;
-   margin-top: 20px;
-}
-
 /*Spacing between edit and remove button */
 .work li:nth-child(4) {
 	margin-right: 10px;
@@ -103,4 +102,23 @@ button.real-large-button {
 /*glyphicon margin-right*/
 .glyphicon, i {
 	margin-right: 10px;
+}
+
+/*remove bottom margin from jumbotron*/
+.jumbotron {
+	padding: 100px 0;
+	margin-bottom: 0;
+}
+
+
+@media (max-width: 1250px) {
+    .jumbotron h1 {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 740px) {
+    .jumbotron h1 {
+        font-size: 2.5em;
+    }
 }
