@@ -50,7 +50,7 @@ header h1 {
 	padding: 40px 0;
 }
 
-.week {
+.week, .total {
 	padding: 5px;
 	margin-bottom: 10px;
 }
@@ -70,4 +70,8 @@ header h1 {
 .dataEntered li {
 	display: inline-block;
 	margin-right: 40px;
+}
+
+.total {
+	margin-top: 40px;
 }
