@@ -30,12 +30,20 @@ $(function() {
 		return total;
 	}
 
+	//Prevent form submit default action
+	$("form").submit(function(e) {
+		e.preventDefault();
+	});
+
 
 	$("#submitData").on("click", function() {
 		//Make sure input fields are not left blank
 		if($dayInput.val() === "" || $timeInput.val() === "" || $distanceInput.val() === "" || $caloriesInput.val() === "") {
 			//Display please fill in all text fields warning
-			$(".warning").fadeIn(500).delay(2000).fadeOut(500);
+			$(".warning h2").text("Please complete entire form").closest(".warning").fadeIn(500).delay(2000).fadeOut(500);
+		}else if(isNaN($timeInput.val()) || isNaN($distanceInput.val()) || isNaN($caloriesInput.val())) {
+			//Display please fill in all text fields warning
+			$(".warning h2").text("Please only input numbers").closest(".warning").fadeIn(500).delay(2000).fadeOut(500);
 		} else {
 			//Convert text input into number then push data into arrays
 			$timeData.push(parseFloat($timeInput.val()));
@@ -46,10 +54,12 @@ $(function() {
 					"<li><strong>Day:</strong> " + $dayInput.val() + "</li>" +
 					"<li><strong>Time Spent:</strong> " + $timeData[$timeData.length - 1] + " minutes</li>" +
 					"<li><strong>Distance:</strong> " + $distanceData[$distanceData.length - 1] + " miles</li>" +
-					"<li><strong>Calories Burned:</strong> " + $caloriesData[$caloriesData.length - 1] + "</li>" +
+					/* Edit and remove button */
+					/*"<li><button class='remove btn btn-default'>Edit</button></li>" +
+					"<li><button class='remove btn btn-danger'>Remove</button></li>" +*/
 					"</ul>");
-			//Append ul with data to page
-	  	$(".dataPopulation").append($ulWork);
+			//Append ul with data to page using a fade in effect
+	  	$(".dataPopulation").append($ulWork).children(':last').hide().fadeIn(1000);;
 	  	//Calculate totalWork and update page
 	  	$(".timeTotal").text(sumArray($timeData));
 	  	$(".distanceTotal").text(sumArray($distanceData));

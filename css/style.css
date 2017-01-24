@@ -43,7 +43,7 @@ header h1 {
 }
 
 .entry h2 {
-	padding-bottom: 20px;
+	padding-bottom: 40px;
 }
 
 .data {
@@ -74,4 +74,21 @@ header h1 {
 
 .total {
 	margin-top: 40px;
+}
+
+label.real-large-label {
+   font-size: 1.5em;
+   line-height: 46px;
+   font-weight: normal;
+}
+
+button.real-large-button {
+   font-size: 22px;
+   padding: 20px 30px;
+   margin-top: 20px;
+}
+
+/*Spacing between edit and remove button */
+.work li:nth-child(4) {
+	margin-right: 10px;
 }
