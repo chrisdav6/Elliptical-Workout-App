@@ -39,10 +39,10 @@ $(function() {
 	$("#submitData").on("click", function() {
 		//Make sure input fields are not left blank
 		if($dayInput.val() === "" || $timeInput.val() === "" || $distanceInput.val() === "" || $caloriesInput.val() === "") {
-			//Display please fill in all text fields warning
+			//Display please fill in only warning
 			$(".warning h2").text("Please complete entire form").closest(".warning").fadeIn(500).delay(2000).fadeOut(500);
 		}else if(isNaN($timeInput.val()) || isNaN($distanceInput.val()) || isNaN($caloriesInput.val())) {
-			//Display please fill in all text fields warning
+			//Display please fill in only numbers warning
 			$(".warning h2").text("Please only input numbers").closest(".warning").fadeIn(500).delay(2000).fadeOut(500);
 		} else {
 			//Convert text input into number then push data into arrays
