@@ -17,6 +17,7 @@ header {
 }
 
 header h1 {
+	font-size: 3em;
 	color: white;
 }
 
@@ -97,4 +98,9 @@ button.real-large-button {
 .alert-danger {
 	background: #c94444;
 	color: #fff;
+}
+
+/*glyphicon margin-right*/
+.glyphicon, i {
+	margin-right: 10px;
 }

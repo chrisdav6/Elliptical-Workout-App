@@ -39,13 +39,13 @@ $(function() {
 	$("#submitData").on("click", function() {
 		//Make sure input fields are not left blank
 		if($dayInput.val() === "" || $timeInput.val() === "" || $distanceInput.val() === "" || $caloriesInput.val() === "") {
-			//Display please fill in only warning
-			$(".warning h2").text("Please complete entire form").closest(".warning").removeClass("bg-primary").addClass("alert-danger").addClass("bg-primary").fadeIn(500).delay(2000).fadeOut(500);
+			//Display please fill in entire form warning
+			$(".warning h2").text("Please complete entire form").prepend("<i class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></i>").closest(".warning").removeClass("bg-primary").addClass("alert-danger").fadeIn(500).delay(2000).fadeOut(500);
 		}else if(isNaN($timeInput.val()) || isNaN($distanceInput.val()) || isNaN($caloriesInput.val())) {
 			//Display please fill in only numbers warning
-			$(".warning h2").text("Please only input numbers").closest(".warning").removeClass("bg-primary").addClass("alert-danger").fadeIn(500).delay(2000).fadeOut(500);
+			$(".warning h2").text("Please only input numbers").prepend("<i class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></i>").closest(".warning").removeClass("bg-primary").addClass("alert-danger").fadeIn(500).delay(2000).fadeOut(500);
 		} else {
-			$(".warning h2").text("Data Successfully Added!").closest(".warning").removeClass("alert-danger").addClass("bg-primary").fadeIn(500).delay(2000).fadeOut(500);
+			$(".warning h2").text("Data Successfully Added!").prepend("<i class='glyphicon glyphicon-ok-sign' aria-hidden='true'></i>").closest(".warning").removeClass("alert-danger").addClass("bg-primary").fadeIn(500).delay(2000).fadeOut(500);
 			//Convert text input into number then push data into arrays
 			$timeData.push(parseFloat($timeInput.val()));
 			$distanceData.push(parseFloat($distanceInput.val()));
