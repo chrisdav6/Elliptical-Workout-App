@@ -8,6 +8,7 @@ $(function() {
 	var $timeInput = $("#time");
 	var $distanceInput = $("#distance");
 	var $caloriesInput = $("#calories");
+	var $weekCount = 1;
 
 	var $dataEntered = $(".dataEntered");
 
@@ -59,6 +60,19 @@ $(function() {
 					/*"<li><button class='remove btn btn-default'>Edit</button></li>" +
 					"<li><button class='remove btn btn-danger'>Remove</button></li>" +*/
 					"</ul>");
+			//Create Week Heading
+			var $weekHeading = $("<h3 class='week bg-primary'></h3>");
+			$($weekHeading).text("Week - " + $weekCount);
+			//If start of the week add heading, if week longer than 6 days update week count - Workout based on 6 day work week
+			if($timeData.length === 1) {
+				$(".dataPopulation").append($weekHeading);
+			}else if($dayInput.val() === "Monday") {
+				$weekCount++;
+				$($weekHeading).text("Week - " + $weekCount);
+				$(".dataPopulation").append($weekHeading);
+			}
+			
+
 			//Append ul with data to page using a fade in effect
 	  	$(".dataPopulation").append($ulWork).children(':last').hide().fadeIn(1000);;
 	  	//Calculate totalWork and update page
@@ -76,5 +90,6 @@ $(function() {
 		
 
 	});
+
 
 });

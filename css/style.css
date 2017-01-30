@@ -48,7 +48,8 @@ header h1 {
 	padding: 40px 0;
 }
 
-.entry h2 {
+.entry p {
+	font-size: 1.25em;
 	padding-bottom: 40px;
 }
 
